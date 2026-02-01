@@ -94,9 +94,7 @@ function App() {
             src={user.gender === "male" ? male : female}
             alt="Avatar"
           />
-
           <div>
-            
             <h3>{user.username}</h3>
             <h6>
               {user.age} <span>({user.gender})</span>
