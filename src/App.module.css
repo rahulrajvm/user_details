@@ -1,0 +1,217 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+  min-height: 100vh;
+  color: #1e293b;
+  padding: 20px 16px;
+}
+
+.user_login_card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 290px;
+  margin: 2rem auto;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user_login_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.user_login_card h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 1.75rem;
+  text-align: center;
+  letter-spacing: -0.025em;
+}
+
+
+label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: #f8fafc;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  background: white;
+}
+
+input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+input[type="radio"] + label {
+  display: inline-block;
+  margin-right: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.gender-group {
+  display: flex;
+  gap: 2rem;
+  margin: 1.25rem 0 1.75rem;
+}
+
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
+  margin-top: 1.5rem;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.25);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+
+h4 {
+  text-align: center;
+  color: #475569;
+  font-weight: 500;
+  margin: 2rem 0 1.5rem;
+  font-size: 1.15rem;
+}
+
+.box1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+
+.card2,
+.card3 {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  transition: all 0.22s ease;
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.card2:hover,
+.card3:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.card2 {
+  border-left: 5px solid #3b82f6;
+}
+
+.card3 {
+  border-left: 5px solid #ec4899;
+}
+
+.card2 img,
+.card3 img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f1f5f9;
+  flex-shrink: 0;
+}
+
+.card2 h3,
+.card3 h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.35rem;
+}
+
+.card2 h6,
+.card3 h6 {
+  font-size: 0.95rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.card2 h6 span,
+.card3 h6 span {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+
+@media (max-width: 640px) {
+  .user_login_card {
+    padding: 1.75rem 1.25rem;
+    margin: 1rem auto;
+  }
+
+  .box1 {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  button[type="submit"] {
+    padding: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .user_login_card {
+    padding: 1.5rem 1rem;
+  }
+
+  .card2 img,
+  .card3 img {
+    width: 64px;
+    height: 64px;
+  }
+}
